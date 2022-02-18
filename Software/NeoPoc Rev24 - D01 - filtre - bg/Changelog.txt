@@ -1,0 +1,4 @@
+*Bataryayý okumak için ADC1 in IN3 Channelý enable edildi.
+
+* Mavi Led söküldü ikiside beyaz yapýldý (mavi led stabil deðildi.)
+* Optik muhafazanýn vidalarý daha fazla sýkýldý ýþýk sýzmalarýna karþý.

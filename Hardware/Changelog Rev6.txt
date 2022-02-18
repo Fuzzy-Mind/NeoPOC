@@ -1,0 +1,66 @@
+-Led Driver 1, Led Driver 2 ve Led Driver 3 devrelerindeki direnç deðerli yeniden hesaplanýp deðiþtirildi.
+	*R451, R501, R551 -> 402k Ohm (Digikey Part No: P20890CT-ND)
+	*R452, R551, R552 -> 200k Ohm (Digikey Part No: P20854CT-ND)
+
+- Sd Card devresindeki MOSI ve MISO baðlantýlarý tersti düzeltildi.
+	*MOSI -> uPSD_CMD  (DI)
+	*MISO -> uPSD_DO   (DO)
+
+- Led Driver 3 devreden cýkarýldý.
+
+- Light Voltage Measurement devresindeki kazanç 1 yapýldý.
+	*R353 (100 kohm) devreden çýkarýldý.
+	*R351 (10  kohm) yerine 100 kohm takýldý.
+	*R357 (100 kohm) Opamp'ýn 2. bacaðý ile GND arasýna alýndý.
+	*D350 devreden çýkarýldý.
+	*Sensör beslemesi 3v3 yapýldý.
+
+- Þarj devresindeki R606 devreden çýkarýldý.
+
+- Buzzer'a (CMT-1203-SMT) paralel olan D250 diyotu yerine 1 kohm takýldý.
+
+- Light Voltage Measurement kýsmýndaki C350 ve C351 kondansatörleri söküldü.
+
+- 5V regülatörün ayar kýsmý olan R150 söküldü (kýsa devre)
+				 R151 söküldü (açýk devre).
+
+- Cihaz þarj ünitesinden kaydýðý zaman tx-rx pinlerinden iþlemciye batarya voltajý gidiyor.
+Bundan dolayý iþlemci zarar görüyor. Bunu engellemek için pinler taþýndý.
+
+      >>MainBoard Üzerinde (J1)
+ 	* USART3_Rx2 Pogo konnektörün 7. pininden 6. pinine taþýndý.
+  	* USART3_Tx2 Pogo konnektörün 8. pininden 7. pinine taþýndý.
+      >>Doc üzerinde.      (J2)
+	* USART2_RX1 Pogo konnektörün 6. pininden 7. pinine taþýndý.
+	* USART2_Tx1 Pogo konnektörün 5. pininden 6. pinine taþýndý.
+
+- Ekranýn topraðý DGND'den alýndý.
+
+- JPRG würth 690367290676 ribbon konnektör ile deðiþtirildi.
+
+- Devreye 5v to 6v step-up converter eklendi.
+	
+	* ST8R00PUR entegresi seçildi.
+	* Çýkýþ 6V led driverlara verildi.
+	* Dbat katot ucu mainboard üzerindeki pogonun 5. pinine baglandý.
+
+- Ekran açýp kapatmak için mosfet eklendi.
+
+- LED100, LED101, LED102 yerine RGB Led (APTF1616SEJ3ZGGVBDC) eklendi.
+
+- SD Card konnektörü Push-Pull olan Würth 693071010811 konnektör ile deðiþtirildi.
+
+- Kart alt taraftan 1mm kýsaltýldý.
+
+- LCD konnektörü 2.5mm yukarý taþýndý.
+
+- TS2596 footprint eklendi.
+
+- Mainboard üzerindeki 4 adet montaj deliði C180-M3 yerine M3 yapýldý.
+
+- SD Card padleri 1.3mm uzatýldý.
+
+- U350 Entegresinin D Portuna 10k ntc eklendi. Cýkýsý AN0 Pinine baðlandý.
+
+- 18650 piller için pcbye yuva oluþturuldu.
+
